@@ -6,15 +6,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <title>Lugx Gaming - Shop Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+    <title>Happy Flower</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-  />
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
 
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="style.css" />
@@ -84,61 +85,69 @@ https://templatemo.com/tm-589-lugx-gaming
     </div>
   </header>
   <!-- ***** Header Area End ***** -->
+  <!-- ***** Header Area End ***** -->
 
   <div class="page-heading header-text">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <h3>Please Register</h3>
-          <span class="breadcrumb"><a href="index.html">Home</a> >Register</span>
+          <h3>Our Shop</h3>
+          <span class="breadcrumb"><a href="#">Home</a> > Our Shop</span>
         </div>
       </div>
     </div>
   </div>
 
+  <div class="body_area">
+    
+   
+    <div class="section categories">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <div class="section-heading">
+              <h2>Categories</h2>
+              
+              <div class="d-flex justify-content-center g-2">
+                <div class="categories-container mt-3" id="drop-cat"></div>
+              </div>
+              <div class="text-center justify-content-center p-4">
+                <div class="search-container ">
+                  <input id="searchflw" type="text" placeholder="Search flower..." class="search-input" />
+                  <a onclick="handleSearch()" class="search-button">Search</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row" id="flowers">
+          <!-- Flower cards will be dynamically added here -->
+        </div>
+      </div>
+    </div>
+
+    <div >
+
+      
+
+      <!-- <div id="flowers" class="flowers mt-5 " style="width: 18rem;"></div> -->
 
 
-    <!-- Registration section -->
-<!-- Registration section -->
-<div class="login-container">
-  <div class="col-md-6">
-     
-      <form action="" onsubmit="handleRegistration(event)" class="registration-form">
-          <p id="error" class="text-danger"></p>
-          <div class="form-group">
-              <input id="username" type="text" class="form-control" placeholder="Username" required>
-          </div>
-          <div class="form-group">
-              <input id="first_name" type="text" class="form-control" placeholder="First Name" required>
-          </div>
-          <div class="form-group">
-              <input id="last_name" type="text" class="form-control" placeholder="Last Name" required>
-          </div>
-          <div class="form-group">
-              <input id="email" type="email" class="form-control" placeholder="Email" required>
-          </div>
-          <div class="form-group">
-              <input id="password" type="password" class="form-control" placeholder="Password" required>
-          </div>
-          <div class="form-group">
-              <input id="confirm_password" type="password" class="form-control" placeholder="Confirm Password" required>
-          </div>
-          <button type="submit" class="btn btn-primary">Register</button>
-          <p class="mt-3">Already have an account? <a href="login.html">Log in here</a></p>
-      </form>
+    </div>
+    <div id="nodata" class="nodata">
+      <img src="./Images/nodata.png" alt="" />
+    </div>
+    <div id="spinner" class="loading text-center">
+      <h4>loading....</h4>
+    </div>
+
+
   </div>
-  <div class="col-md-6">
-      <img class="w-100" src="./Images/register.png" alt="">
-  </div>
-</div>
-
-
-
-
   <footer>
     <div class="container">
       <div class="col-lg-12">
-        <p>&copy; 2024 Happy Flower. All Rights Reserved. &nbsp;&nbsp; <a rel="nofollow" href="https://templatemo.com" target="_blank">Design: TemplateMo</a></p>
+        <p>Copyright © 2048 LUGX Gaming Company. All rights reserved.</p>
       </div>
     </div>
   </footer>
@@ -150,15 +159,15 @@ https://templatemo.com/tm-589-lugx-gaming
   integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
   crossorigin="anonymous"
 ></script>
-  <script src="vendor/jquery/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+  <script src="./app.js"></script>
+  <script src="./logout.js"></script>
+   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/isotope.min.js"></script> 
   <script src="assets/js/owl-carousel.js"></script>
   <script src="assets/js/counter.js"></script>
-  <script src="assets/js/custom.js"></script>
-
- <script src="./auth.js"></script>
-
+  <script src="assets/js/custom.js"></script> 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const token = localStorage.getItem("token");
@@ -179,6 +188,5 @@ https://templatemo.com/tm-589-lugx-gaming
       }
     });
 </script>
-  </body>
+</body>
 </html>
-

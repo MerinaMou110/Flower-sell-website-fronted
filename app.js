@@ -1,28 +1,20 @@
-const loadflower = (search)=>{
-    document.getElementById("flowers").innerHTML = "";
-    document.getElementById("spinner").style.display = "block";
+const loadflower = (search) => {
+  document.getElementById("flowers").innerHTML = "";
+  document.getElementById("spinner").style.display = "block";
 
-
-    fetch(
-        `https://flower-sell-website-drf-project.onrender.com/flower/list/?search=${
-            search ? search : ""}`
-            
-    )
+  fetch(`https://flower-sell-website-drf-project.onrender.com/flower/list/?search=${search ? search : ""}`)
     .then((res) => res.json())
-    .then((data)=>{
-        console.log(data);
+    .then((data) => {
       if (data.length > 0) {
         document.getElementById("spinner").style.display = "none";
         document.getElementById("nodata").style.display = "none";
         displyflowers(data);
       } else {
-        document.getElementById("doctors").innerHTML = "";
+        document.getElementById("flowers").innerHTML = ""; // Clear previous flower data
         document.getElementById("spinner").style.display = "none";
         document.getElementById("nodata").style.display = "block";
       }
-
     });
-    
 };
 
 const truncateWords = (text, numWords) => {
@@ -33,45 +25,45 @@ const truncateWords = (text, numWords) => {
     return text;
   };
 
-const displyflowers = (flowers) => {
-    
-    flowers?.forEach((flower) => {
-      console.log(flower);
-      
-      const parent = document.getElementById("flowers");
+  const displyflowers = (flowerss) => {
+    const parent = document.getElementById("flowers");
+    parent.innerHTML = ""; // Clear previous content
+  
+    flowerss?.forEach((flower) => {
       const div = document.createElement("div");
-      div.classList.add("flw-card");
+      div.classList.add("col-lg-3", "col-sm-6", "col-xs-12");
+  
       div.innerHTML = `
-          <img class="doc-img card-img-top" src=${flower.image} alt="" />
-                <h4>${flower?.title}</h4>
-                
-                <p>
-                ${truncateWords(flower.details, 20)} <!-- Adjust the number of words you want to display -->
-                </p>
-               
-                <p>
-                
-                ${flower?.categories?.map((item) => {
-                  return `<button class="bt">${item}</button>`;
-                })}
-                </p>
-                <button class="details-button">
-                <a  target="_blank" href="flowerDetails.html?flowerId=${flower.id}">Details</a>
-            </button>
-            
-           
-          `;
-         
+        <div class="item">
+          <div class="thumb">
+            <img src="${flower.image}" alt="${flower.title}">
+          </div>
+          <div class="down-content">
+            <h4>${flower.title}</h4>
+            <p>${truncateWords(flower.details, 20)}</p>
+            <p>
+              ${flower.categories.map((category) => {
+                return `<button class="bt">${category}</button>`;
+              }).join("")}
+            </p>
+            <div class="main-button">
+              <a target="_blank" href="flowerDetails.html?flowerId=${flower.id}">Details</a>
+            </div>
+          </div>
+        </div>
+      `;
+  
       parent.appendChild(div);
     });
   };
+  
 
 const handleSearch = () => {
-    const value = document.getElementById("search").value;
+    const value = document.getElementById("searchflw").value;
     loadflower(value);
   };
 
-const loadCategory = () => {
+  const loadCategory = () => {
     fetch("https://flower-sell-website-drf-project.onrender.com/flower/categories/")
       .then((res) => res.json())
       .then((data) => {
@@ -84,7 +76,7 @@ const loadCategory = () => {
           li.innerHTML = `
         <li onclick="loadflower('${item.name}')"> <a class="ct">${item.name}</a></li>
           `;
-        //   console.log(item.name)
+          console.log(item.name)
           parent.appendChild(li);
          
         });

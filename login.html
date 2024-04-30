@@ -1,100 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Lugx Gaming - Shop Page</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
   />
 
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-    crossorigin="anonymous"
-  />
-  <link rel="stylesheet" href="style.css" />
-</head>
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-lugx-gaming.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+<!--
+
+TemplateMo 589 lugx gaming
+
+https://templatemo.com/tm-589-lugx-gaming
+
+-->
+  </head>
+
 <body>
-  <nav class="navbar navbar-expand-lg  nav p-3" >
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">Happy Flower</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          
-         
-         
-        </ul>
-        <li class="nav-item" id="registerBtn" style="display: block;">
-          <a class="nav-link active" aria-current="page" href="register.html"
-            >Register</a
-          >
-        </li>
-        <li class="nav-item" id="loginBtn" style="display: block;">
-          <a class="nav-link active" aria-current="page" href="login.html"
-            >Login</a
-          >
-        </li>
-        <li class="nav-item p-3" id="orderBtn" style="display: block; ">
-          <a class="nav-link active" aria-current="page" href="order_details.html"
-            ><i class="fa-solid fa-cart-shopping"></i></a
-          >
-        </li>
-        <!-- <li onclick="handlelogOut()">
-          <button class="nav-link active" aria-current="page" >
-              Logout
-          </button>
-      </li> -->
-       
-      </div>
-      <div class="dropdown">
-        <button
-          class="btn dropdown-toggle"
-          style="background-color:white ;"
-          type="button"
-          id="dropdownMenuButton2"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-        <i class="fa-solid fa-user"></i>
-        </button>
-        <ul
-          class="dropdown-menu dropdown-menu-dark"
-          aria-labelledby="dropdownMenuButton2"
-        >
-          <li>
-            <a class="dropdown-item active" href="user_details.html"
-              >profile</a
-            >
-          </li>
-          
-          <li onclick="handlelogOut()">
-            <a class="dropdown-item">logout</a>
-          </li>
-        </ul>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </div>
-  </nav>
+  </div>
+  <!-- ***** Preloader End ***** -->
 
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.html" class="logo">
+                        <img src="images/logo.png" alt="" style="width: 120px;">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                      <li><a href="index.html" class="active">Home</a></li>
+                      <li><a href="shop.html">Our Shop</a></li>
+                      <!-- <li><a href="product-details.html">Product Details</a></li> -->
+                      <li><a href="contact.html">Contact Us</a></li>
+                      <li><a href="order_details.html" id="orderBotton"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                      
+                      <li onclick="handlelogOut()">
+                        <a id="logoutBtn">logout</a>
+                      </li>
+                      <li><a href="user_details.html" id="profileBotton"><i class="fa-solid fa-user"></i></a></li>
+                      
+                      
+                      <li><a href="register.html" id="registerBtn">Sign In</a></li>
+                  </ul>   
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div class="page-heading header-text">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h3>Please Login</h3>
+          <span class="breadcrumb"><a href="index.html">Home</a> >Login</span>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 <!-- login section -->
 <div class="login-container">
     <div class="col-md-6">
-      <h1 class="title mt-5">Please Login</h1>
+     
       <form action="" class="registration-form">
         <div class="form-group">
           <input
@@ -126,71 +132,49 @@
 </div>
 
 
-    <!-- footer -->
-    <footer class="p-5 foot">
-      <div class="container w-75 m-auto row p-5">
-          <div class="col-md-4">
-              
-             
-              <h5>Follow Us</h5>
-              <div class="icons">
-                  <a href="https://www.facebook.com/happyflower" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
-                  <a href="https://www.instagram.com/happyflower/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
-                  <a href="https://twitter.com/happyflower" target="_blank"><i class="fa-brands fa-square-twitter"></i></a>
-              </div>
-          </div>
-          <div class="col-md-4" >
-              <h5>Quick Links</h5>
-              <ul class="und">
-                  <li><a href="/about">About</a></li>
-                  <li><a href="/contact">Contact Us</a></li>
-                  <li><a href="/culture">Culture</a></li>
-                  <li><a href="index.html">Blog</a></li>
-              </ul>
-          </div>
-          <div class="col-md-4">
-              <h5>Customer Support</h5>
-              <ul class="und">
-                  <li><a href="order_details.html">Shipping Information</a></li>
-                  <li><a href="/returns">Returns & Exchanges</a></li>
-                  <li><a href="/privacy">Privacy Policy</a></li>
-              </ul>
-          </div>
-      </div>
-      <hr />
-      <p class="text-center mt-3">
-          <small>&copy; 2024 Happy Flower. All Rights Reserved</small>
-      </p>
-  </footer>
-  
-  <script
-  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-  crossorigin="anonymous"
+<footer>
+  <div class="container">
+    <div class="col-lg-12">
+      <p>&copy; 2024 Happy Flower. All Rights Reserved. &nbsp;&nbsp; <a rel="nofollow" href="https://templatemo.com" target="_blank">Design: TemplateMo</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<!-- Bootstrap core JavaScript -->
+<script
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+crossorigin="anonymous"
 ></script>
-<script src="./app.js"></script>
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/isotope.min.js"></script>
+<script src="assets/js/owl-carousel.js"></script>
+<script src="assets/js/counter.js"></script>
+<script src="assets/js/custom.js"></script>
+
 <script src="./auth.js"></script>
+
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const token = localStorage.getItem("token");
-    const dropdownMenu = document.querySelector(".dropdown");
-    const registerBtn = document.getElementById("registerBtn");
-    const loginBtn = document.getElementById("loginBtn");
-    const orderBtn = document.getElementById("orderBtn");
     
-    // Hide dropdown menu if user is not authenticated
+    const profileBtn = document.getElementById("profileBotton"); // Corrected typo in ID name
+    const registerBtn = document.getElementById("registerBtn");
+    const logoutBtn = document.getElementById("logoutBtn"); // Added missing ID
+    const orderButton = document.getElementById("orderBotton"); // Corrected typo in ID name
+    
+    // Hide elements if user is not authenticated
     if (!token) {
-      dropdownMenu.style.display = "none";
-      orderBtn.style.display = "none";
+      orderButton.style.display = "none"; // Corrected variable name
+      profileBtn.style.display = "none";
+      logoutBtn.style.display = "none"; // Corrected variable name
     }
     else{
       registerBtn.style.display = "none";
-      loginBtn.style.display = "none";
     }
   });
 </script>
-
-    
 </body>
 </html>
-
