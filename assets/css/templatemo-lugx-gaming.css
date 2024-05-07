@@ -169,7 +169,10 @@ body {
   padding: 0px 30px;
   border-radius: 25px;
   transition: all .3s;
+<<<<<<< HEAD
   margin-bottom: 10px;
+=======
+>>>>>>> fd63a347707ed07244d1a423c8b14dedb70172a4
 }
 
 .main-button a:hover {

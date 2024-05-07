@@ -46,7 +46,11 @@ const truncateWords = (text, numWords) => {
                 return `<button class="bt">${category}</button>`;
               }).join("")}
             </p>
+<<<<<<< HEAD
             <div class="main-button mb-2">
+=======
+            <div class="main-button">
+>>>>>>> fd63a347707ed07244d1a423c8b14dedb70172a4
               <a target="_blank" href="flowerDetails.html?flowerId=${flower.id}">Details</a>
             </div>
           </div>
