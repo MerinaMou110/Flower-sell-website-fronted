@@ -1,8 +1,8 @@
-footer{
+/* footer{
     padding: 50px;
    color: white;
     background: #232F3E;
-}
+} */
 .und a {
     text-decoration: none; /* Remove text decoration */
     color: white; /* Optionally set color for links */
@@ -12,20 +12,25 @@ footer{
     list-style: none;
     padding-left: 0; /* Remove default left padding */
 }
-.nav{
+/* .nav{
     /* background-color: #DBBFB3; */
-    background-color: #232F3E;
-    a{
+    /* background-color: #232F3E; */
+    /* a{
         color: white;
     }
     
-}
+} */ 
     
 /* .search-container {
     display: flex;
     align-items: center;
   } */
   
+  /* Custom CSS to increase profile icon font size */
+#profileBotton i {
+    font-size: 24px; /* Adjust the font size as needed */
+}
+
   .search-input {
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -35,7 +40,7 @@ footer{
   }
   
   .search-button {
-    background-color: #4CAF50;
+    background-color:#170482;
     color: white;
     border: none;
     border-radius: 5px;
@@ -46,6 +51,14 @@ footer{
   
   .search-button:hover {
     background-color: #45a049;
+  }
+
+
+  .categories-container {
+    display: flex;
+    color: black;
+    /* justify-content: space-around; */
+    gap:25px
   }
   
 #noData{
@@ -73,14 +86,14 @@ footer{
     
   }
 
-  .flowers {
+  /* .flowers {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: flex-start; /* Align items to the start of the container */
-    margin-top: 20px; /* Add some margin at the top for spacing */
-    padding: 20px;
-  }
+    /* margin-top: 20px; /* Add some margin at the top for spacing */
+    /* padding: 20px;
+  } */ 
 
   .doc-img{
     width: 100%;
@@ -98,16 +111,14 @@ footer{
 
 }
 
-#drop-cat{
-    background-color: white;
-    color: black;
-}
+
 
 
 .bt{
     background-color: #B6E9FF;
     border-radius: 20px;
     border: none;
+    margin-bottom: 6px;
     color: black;
 }
 

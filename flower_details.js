@@ -12,8 +12,8 @@ const displayDetails = (flower) => {
     div.classList.add("flw-details-container");
     div.innerHTML = `
         <div class="col-md-6">
-            <div class="flower-img">
-                <img class="card-img-top flex-wrap" src="${flower.image}" alt="" />
+            <div class="thumb">
+                <img  src="${flower.image}" alt="" />
             </div>
         </div>
         <div class="col-md-6">
